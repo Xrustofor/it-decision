@@ -50,8 +50,7 @@ export default new Vuex.Store({
     },
     mutations: {
         setRemoveItems(state, payload) {
-            let index = state.items.findIndex( el => el.id == +payload );
-            state.items = state.items.filter((el, key) => !(key == index))
+            state.items = state.items.filter((el, key) => !(el.id == +payload))
         }
     },
     actions: {
